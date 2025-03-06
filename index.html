@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smiling Face in Space</title>
+    <style>
+        body {
+            background: black;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        /* Starry Background */
+        
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 2px, transparent 2px), radial-gradient(circle, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+            background-size: 50px 50px, 100px 100px;
+            animation: twinkle 3s infinite alternate ease-in-out;
+        }
+        
+        @keyframes twinkle {
+            0% {
+                opacity: 0.6;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /* Smiley Face */
+        
+        .face {
+            width: 150px;
+            height: 150px;
+            background: yellow;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+        }
+        /* Eyes */
+        
+        .eye {
+            width: 20px;
+            height: 20px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 40px;
+        }
+        
+        .eye.left {
+            left: 40px;
+        }
+        
+        .eye.right {
+            right: 40px;
+        }
+        /* Smiling Mouth */
+        
+        .mouth {
+            position: absolute;
+            bottom: 30px;
+            width: 60px;
+            height: 30px;
+            border-bottom: 5px solid black;
+            border-radius: 0 0 50px 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="stars"></div>
+    <div class="face">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="mouth"></div>
+    </div>
+
+</body>
+
+</html>
