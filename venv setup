@@ -1,0 +1,5 @@
+cd C:\Users\seera\Desktop\Development
+python -m venv venv
+venv\Scripts\activate
+pip install streamlit scikit-learn pandas numpy matplotlib
+streamlit run iris_prediction_rf.py
